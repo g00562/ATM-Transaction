@@ -2,7 +2,7 @@ bal= 0
 correct_pin = 1234
 
 def check_pin():
-    pin = int(input("Enter your pin:"))
+    pin = int(input("\nEnter your pin:"))
     return pin == correct_pin
 def balance(bal):
     
@@ -71,10 +71,11 @@ def main():
         
         else:
             print("\nInvalid input.")
-
-if check_pin():
-    print("Access granted")
-    main()
-else:
-    print("Incorrect pin")
+while True:
+    if check_pin():
+        print("\nAccess granted")
+        main()
+        break
+    else:
+        print("\nIncorrect pin. Please try again.")
     
