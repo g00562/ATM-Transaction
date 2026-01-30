@@ -4,17 +4,33 @@ def balance(bal):
     print(f"\nYour current balance is {bal}")
 
 def deposite():
+    
     global bal
     a = int(input("Enter amount to deposite:"))
-    bal += a
-    print(f"RS. {a} is deposited.")
+    
+    if a > 0:
+        bal += a
+        print(f"RS. {a} is deposited.")
+    
+    else:
+        print("Invalid Input")
     return bal
 
 def withdraw():
+    
     global bal
     a = int(input("Enter amount to withdraw:"))
-    bal -= a
-    print(f"Rs. {a} is withdrawed.")
+    
+    if 0 < a >= bal:
+        
+        if a <= bal:
+            bal -= a
+            print(f"Rs. {a} is withdrawed.")
+        else:
+            print("You don't have that much balance.")
+        
+    else:
+        print("Envalid Input")
     return bal
 
 def main():
