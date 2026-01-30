@@ -3,13 +3,15 @@ def balance(bal):
     
     print(f"\nYour current balance is {bal}")
 
-def deposite(bal):
+def deposite():
+    global bal
     a = int(input("Enter amount to deposite:"))
     bal += a
     print(f"RS. {a} is deposited.")
     return bal
 
-def withdraw(bal):
+def withdraw():
+    global bal
     a = int(input("Enter amount to withdraw:"))
     bal -= a
     print(f"Rs. {a} is withdrawed.")
@@ -29,14 +31,12 @@ def main():
             balance(bal)
         
         elif ch == 2:
-            # a = int(input("Enter amount to deposite:"))
-            # print(f"RS. {a} is deposited.")
-            deposite(bal)
+            
+            deposite()
         
         elif ch ==3:
-            # a = int(input("Enter amount to withdraw:"))
-            # print(f"Rs. {a} is withdrawed.")
-            withdraw(bal)
+            
+            withdraw()
 
         elif ch == 4:
             print("Goodbye")
